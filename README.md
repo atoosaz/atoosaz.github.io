@@ -4,8 +4,6 @@ Personal website of **Atoosa Ayazbakhsh Ziyabari**: M.Sc. researcher in Mechanic
 
 **Live:** https://atoosaz.github.io
 
-The layout is inspired by [Brittany Chiang](https://brittanychiang.com/)'s portfolio. It's plain HTML, CSS and a little JavaScript, with no build step, so GitHub Pages serves it directly from the `main` branch.
-
 ## Structure
 
 ```
