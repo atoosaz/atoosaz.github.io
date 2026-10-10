@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Atoosa Ayazbakhsh Ziyabari</title>
-  <meta name="description" content="Atoosa Ayazbakhsh Ziyabari is an M.Sc. researcher in Mechanical Engineering at the University of Alberta, building adaptive robotic rehabilitation systems with machine learning.">
+  <meta name="description" content="Atoosa Ayazbakhsh Ziyabari is an M.Sc. researcher in Mechanical Engineering at the University of Alberta, building adaptive robotic rehabilitation systems with adaptive control, inverse reinforcement learning and deep learning.">
   <meta name="author" content="Atoosa Ayazbakhsh Ziyabari">
   <meta name="theme-color" content="#0f172a">
   <link rel="canonical" href="https://atoosaz.github.io/">
@@ -18,6 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>try{if(localStorage.getItem("theme")==="light")document.documentElement.setAttribute("data-theme","light")}catch(e){}</script>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -33,14 +34,16 @@
           <img class="avatar" src="assets/img/profile.jpg" alt="Photo of Atoosa Ayazbakhsh" width="560" height="700">
           <h1 class="name"><a href="/">Atoosa Ayazbakhsh</a></h1>
           <h2 class="role">Robotics &amp; AI Researcher</h2>
-          <p class="tagline">I design intelligent, adaptive systems for robotic rehabilitation and motor learning.</p>
+          <p class="tagline">I turn human and sensor data into adaptive robot behaviour, using reinforcement learning, deep learning and real-time control.</p>
 
           <nav class="nav" aria-label="In-page jump links">
             <ul>
               <li><a href="#about" class="active"><span class="nav-indicator"></span><span class="nav-text">About</span></a></li>
+              <li><a href="#research"><span class="nav-indicator"></span><span class="nav-text">Research</span></a></li>
               <li><a href="#experience"><span class="nav-indicator"></span><span class="nav-text">Experience</span></a></li>
               <li><a href="#education"><span class="nav-indicator"></span><span class="nav-text">Education</span></a></li>
               <li><a href="#projects"><span class="nav-indicator"></span><span class="nav-text">Projects</span></a></li>
+              <li><a href="#skills"><span class="nav-indicator"></span><span class="nav-text">Skills</span></a></li>
               <li><a href="#publications"><span class="nav-indicator"></span><span class="nav-text">Publications</span></a></li>
             </ul>
           </nav>
@@ -83,8 +86,7 @@
           <p>
             I’m a Master’s student in Mechanical Engineering at the
             <a class="link-strong" href="https://www.ualberta.ca/" target="_blank" rel="noreferrer noopener">University of Alberta</a>,
-            working where robotics, machine learning and human motor learning meet. In the IDEA Lab, under the supervision of
-            Dr.&nbsp;Milad Nazarahari and Prof.&nbsp;Albert H.&nbsp;Vette, I design control strategies and data-driven algorithms that adapt
+            working where robotics, machine learning and human motor learning meet. In the IDEA Lab, I design control strategies and data-driven algorithms that adapt
             robotic rehabilitation to each person in real time, keeping therapy challenging enough to drive learning, without
             becoming discouraging.
           </p>
@@ -95,16 +97,26 @@
             systems, network and website.
           </p>
           <p>
-            Today my work spans <span class="hl">reinforcement learning</span>,
-            <span class="hl">deep learning</span>, computer vision and biosignal processing.
-            Two of our papers were published at
-            <a class="link-strong" href="#publications">IEEE BioRob 2026</a>, and I also teach: this term I’m a teaching
-            assistant and lecturer for Applied Computational Intelligence for Engineers.
+            My research sits on two questions. How should a robot adjust a task’s difficulty as a person learns? And
+            how can we tell, beyond a game score, that they are actually learning? I’ve approached the first with
+            adaptive control, a fuzzy-PID difficulty controller overseen by a plateau detector, and the second with
+            preference-based inverse reinforcement learning. Both lines of work were published at IEEE BioRob 2026.
+          </p>
+          <p>
+            Alongside that, I build deep learning models for medical images and physiological signals (CNNs,
+            Transformers, autoencoders) and robot perception pipelines such as 3D LiDAR SLAM in ROS. I also teach:
+            this term I’m a teaching assistant and lecturer for Applied Computational Intelligence for Engineers.
           </p>
           <p>
             Outside the lab, I volunteer at research and engineering conferences on campus. I speak Persian and English,
             and some French.
           </p>
+
+          <div class="more-wrap">
+            <a class="more" href="about.html" aria-label="More about me and my hobbies">
+              <span><span class="u">More About Me &amp; My </span><span class="nowrap"><span class="u">Hobbies</span><svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/></svg></span></span>
+            </a>
+          </div>
         </section>
 
         <!-- Experience -->
@@ -121,14 +133,27 @@
                     <span class="plain">Graduate Research Assistant · IDEA Lab, University of Alberta</span>
                   </h3>
                   <p class="card-text">
-                    Designing control strategies and data-driven algorithms to optimize robotic rehabilitation systems.
-                    My thesis focuses on dynamic difficulty adjustment: personalizing therapy and enhancing motor learning
-                    through adaptive difficulty and real-time performance analytics.
+                    Designing control strategies and data-driven algorithms to optimize robotic rehabilitation systems,
+                    supervised by Dr.&nbsp;Milad Nazarahari and Prof.&nbsp;Albert H.&nbsp;Vette. My thesis focuses on
+                    dynamic difficulty adjustment: personalizing therapy and enhancing motor learning through adaptive
+                    difficulty and real-time performance analytics.
                   </p>
+                  <ul class="card-points">
+                    <li>Designed a two-layer difficulty controller for robot-assisted upper-limb exergames, a fuzzy
+                      gain-scheduled PID loop under a supervisory plateau and slacking detector. First author, IEEE
+                      BioRob 2026.</li>
+                    <li>Evaluated it in a four-participant feasibility study: every participant improved, with normalized
+                      performance up 17.6% after training and partly retained an hour later.</li>
+                    <li>Co-authored a preference-based inverse RL framework that learns a reward function from ranked
+                      human gameplay trajectories and uses it to assess motor learning (10 participants,
+                      <span class="nowrap">AUC-ROC&nbsp;0.85</span>).</li>
+                  </ul>
                   <ul class="pills" aria-label="Topics">
                     <li><div class="pill">Dynamic Difficulty Adjustment</div></li>
+                    <li><div class="pill">Fuzzy-PID Control</div></li>
                     <li><div class="pill">Reinforcement Learning</div></li>
                     <li><div class="pill">Inverse RL</div></li>
+                    <li><div class="pill">Human-in-the-Loop</div></li>
                     <li><div class="pill">Rehabilitation Robotics</div></li>
                     <li><div class="pill">Motor Learning</div></li>
                   </ul>
@@ -168,15 +193,15 @@
                 <header class="card-meta" aria-label="June to August 2023">Jun — Aug 2023</header>
                 <div class="card-body">
                   <h3 class="card-title">
-                    <a href="https://neuromatch.io/" target="_blank" rel="noreferrer noopener" aria-label="Summer Intern at Neuromatch Academy (opens in a new tab)">
                       <span class="hit"></span>
-                      <span>Summer Intern · <span class="nowrap">Neuromatch Academy<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd"/></svg></span></span>
-                    </a>
+                      <span>Summer Intern · <span class="nowrap">Neuromatch Academy</span></span>
                   </h3>
                   <p class="card-text">
                     Explored how memory shapes storytelling by analysing imagined, recalled and retold narratives from the
                     Hippocorpus dataset. Built and evaluated deep learning models in Python end to end, from preprocessing
-                    and feature extraction to training and performance assessment.
+                    and feature extraction to training and performance assessment. The project ran alongside Neuromatch’s
+                    intensive Deep Learning course in PyTorch, which covers optimization, CNNs, Transformers,
+                    generative models and deep RL, and earned its Tutorial &amp; Project Certificate.
                   </p>
                   <ul class="pills" aria-label="Technologies used">
                     <li><div class="pill">Python</div></li>
@@ -277,22 +302,20 @@
                 <header class="card-meta" aria-label="2025 to Present">2025 — Present</header>
                 <div class="card-body">
                   <h3 class="card-title">
-                    <a href="https://www.ualberta.ca/" target="_blank" rel="noreferrer noopener" aria-label="M.Sc. Mechanical Engineering at the University of Alberta (opens in a new tab)">
                       <span class="hit"></span>
-                      <span>M.Sc. Mechanical Engineering · <span class="nowrap">University of Alberta<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd"/></svg></span></span>
-                    </a>
+                      <span>M.Sc. Mechanical Engineering · <span class="nowrap">University of Alberta</span></span>
                   </h3>
                   <p class="card-text">
                     <strong>Thesis:</strong> Dynamic Difficulty Adjustment in Robotic Rehabilitation and Motor Learning.
                     GPA 3.9/4.0. Recipient of the University of Alberta Graduate Recruitment Scholarship, a competitive
                     merit-based award for incoming graduate students.
                   </p>
-                  <ul class="pills" aria-label="Selected coursework">
-                    <li><div class="pill">Biomechanical Motion Analysis</div></li>
-                    <li><div class="pill">ML for Biomedical Applications</div></li>
-                    <li><div class="pill">Applied Computational Intelligence</div></li>
-                    <li><div class="pill">Signal Processing</div></li>
-                    <li><div class="pill">Autonomous Navigation</div></li>
+                  <ul class="pills" aria-label="Selected coursework and grades">
+                    <li><div class="pill">ML for Biomedical Applications · A+</div></li>
+                    <li><div class="pill">Applied Computational Intelligence · A+</div></li>
+                    <li><div class="pill">Biomechanical Motion Analysis · A+</div></li>
+                    <li><div class="pill">Time &amp; Spectral Signal Processing · A</div></li>
+                    <li><div class="pill">Autonomous Drive &amp; Navigation · A-</div></li>
                   </ul>
                 </div>
               </div>
@@ -321,11 +344,11 @@
 
           <h3 class="sub-heading">Certifications</h3>
           <ul class="certs">
-            <li><span class="c-name">Reinforcement Learning Specialization<span class="c-org">University of Alberta · Coursera</span></span><span class="c-date">Jul 2025</span></li>
-            <li><span class="c-name">Deep Learning — Tutorial &amp; Project Certificate<span class="c-org">Neuromatch Academy</span></span><span class="c-date">Jul 2023</span></li>
-            <li><span class="c-name">Neural Networks and Deep Learning<span class="c-org">DeepLearning.AI · Coursera</span></span><span class="c-date">Mar 2022</span></li>
-            <li><span class="c-name">Python Data Structures<span class="c-org">University of Michigan · Coursera</span></span><span class="c-date">Mar 2022</span></li>
-            <li><span class="c-name">Machine Learning<span class="c-org">Stanford University · Coursera</span></span><span class="c-date">Jan 2022</span></li>
+            <li><span class="c-name">Reinforcement Learning Specialization<span class="c-org">University of Alberta · Coursera · four courses</span><span class="c-detail">Bandits, MDPs and dynamic programming; Monte Carlo and TD methods (Q-learning, Expected Sarsa, Dyna-Q); function approximation, policy gradients and actor-critic; capstone lunar-lander agent using Expected Sarsa with a neural network and experience replay.</span></span><span class="c-date">Jul 2025</span></li>
+            <li><span class="c-name">Deep Learning — Tutorial &amp; Project Certificate<span class="c-org">Neuromatch Academy</span><span class="c-detail">Intensive course in PyTorch spanning optimization and regularization, CNNs, Transformers, generative models and deep RL, plus a research project on narrative memory.</span></span><span class="c-date">Jul 2023</span></li>
+            <li><span class="c-name">Neural Networks and Deep Learning<span class="c-org">DeepLearning.AI · Coursera · Grade 95.62/100</span><span class="c-detail">Built shallow and deep networks from scratch in NumPy with vectorized forward and backward propagation.</span></span><span class="c-date">Mar 2022</span></li>
+            <li><span class="c-name">Python Data Structures<span class="c-org">University of Michigan · Coursera · Grade 93.6/100</span></span><span class="c-date">Mar 2022</span></li>
+            <li><span class="c-name">Machine Learning<span class="c-org">Stanford University · Coursera · Grade 93.21/100</span></span><span class="c-date">Jan 2022</span></li>
           </ul>
         </section>
 
@@ -340,15 +363,25 @@
                 <div class="card-body">
                   <h3 class="card-title"><span class="plain">Lung Cancer Image Classification</span></h3>
                   <p class="card-text">
-                    Developed and compared PyTorch models (ResNet50, DenseNet121 and a CNN–Transformer hybrid) to classify
-                    lung images as normal, benign or malignant, with an ablation study. Evaluated with ROC-AUC, F1, Cohen’s
-                    kappa and confusion matrices, plus attention visualizations for interpretability.
+                    Three-class classification of lung images (normal, benign, malignant) in PyTorch, comparing two
+                    convolutional architectures against a hybrid that adds self-attention. Course project for
+                    Machine Learning for Biomedical Applications (BME&nbsp;677).
                   </p>
+                  <ul class="card-points">
+                    <li><strong>Models:</strong> ResNet50 (residual connections), DenseNet121 (dense feature reuse), and
+                      a CNN–Transformer hybrid that pairs convolutional features for local texture with self-attention
+                      for global context, plus an ablation study.</li>
+                    <li><strong>Evaluation:</strong> ROC-AUC, F1, precision, recall, Cohen’s kappa and confusion
+                      matrices, tracked on training dashboards.</li>
+                    <li><strong>Interpretability:</strong> attention visualizations to see which image regions drive
+                      each prediction.</li>
+                  </ul>
                   <ul class="pills" aria-label="Technologies used">
                     <li><div class="pill">PyTorch</div></li>
                     <li><div class="pill">ResNet50</div></li>
                     <li><div class="pill">DenseNet121</div></li>
                     <li><div class="pill">Transformers</div></li>
+                    <li><div class="pill">Medical Imaging</div></li>
                   </ul>
                 </div>
                 <img class="thumb" src="assets/img/projects/lung.svg" alt="" loading="lazy" width="200" height="125">
@@ -361,10 +394,19 @@
                 <div class="card-body">
                   <h3 class="card-title"><span class="plain">Stress Detection from Wearable Signals</span></h3>
                   <p class="card-text">
-                    An end-to-end pipeline for stress detection on the WESAD dataset: signal preprocessing, time-, frequency-
-                    and phase-domain features, and PCA/autoencoder representations. Compared global vs. personalized models
-                    and explored clustering and continuous arousal estimation with temporal smoothing.
+                    An end-to-end Python pipeline for affective-state (stress) classification from wearable
+                    physiological signals in the WESAD dataset. Course project for Applied Computational Intelligence
+                    (MEC&nbsp;E&nbsp;694).
                   </p>
+                  <ul class="card-points">
+                    <li><strong>Features:</strong> signal preprocessing, then time-, frequency- and phase-domain
+                      features.</li>
+                    <li><strong>Representation learning:</strong> PCA for dimensionality reduction and an autoencoder
+                      for learned latent features.</li>
+                    <li><strong>Modelling:</strong> compared a global model trained across all subjects with
+                      personalized per-subject models, then explored unsupervised clustering and continuous
+                      stress/arousal estimation with temporal smoothing for more realistic monitoring.</li>
+                  </ul>
                   <ul class="pills" aria-label="Technologies used">
                     <li><div class="pill">Python</div></li>
                     <li><div class="pill">Jupyter</div></li>
@@ -382,15 +424,24 @@
                 <div class="card-body">
                   <h3 class="card-title"><span class="plain">3D LiDAR SLAM &amp; Road-Boundary Detection</span></h3>
                   <p class="card-text">
-                    A ROS (C++) pipeline combining LOAM/LeGO-LOAM odometry and mapping with road segmentation, RANSAC curve
-                    fitting and Gaussian Process refinement for curb detection. Validated on KITTI with RViz and EVO
-                    trajectory error analysis.
+                    A ROS (C++) perception pipeline that localizes a vehicle, maps its surroundings and finds the road’s
+                    edges from 3D LiDAR scans. Course project for Autonomous Drive and Navigation (MEC&nbsp;E&nbsp;652).
                   </p>
+                  <ul class="card-points">
+                    <li><strong>SLAM:</strong> LOAM / LeGO-LOAM feature-based odometry and mapping, matching edge and
+                      planar points between scans to estimate the trajectory and build a 3D map.</li>
+                    <li><strong>Boundary detection:</strong> road segmentation of the point cloud, RANSAC curve fitting
+                      to candidate curb points, then Gaussian Process regression to refine the boundary.</li>
+                    <li><strong>Validation:</strong> KITTI sequences, visualized in RViz, with absolute pose error (APE)
+                      measured against ground truth using EVO.</li>
+                  </ul>
                   <ul class="pills" aria-label="Technologies used">
                     <li><div class="pill">ROS</div></li>
                     <li><div class="pill">C++</div></li>
                     <li><div class="pill">LeGO-LOAM</div></li>
+                    <li><div class="pill">Point Clouds</div></li>
                     <li><div class="pill">RANSAC</div></li>
+                    <li><div class="pill">Gaussian Processes</div></li>
                     <li><div class="pill">KITTI</div></li>
                   </ul>
                 </div>
@@ -478,6 +529,159 @@
           </div>
         </section>
 
+        <!-- Skills -->
+        <section id="skills" class="section" aria-label="Skills">
+          <div class="section-head"><h2>Skills</h2></div>
+          <dl class="skills">
+            <div>
+              <dt>Programming</dt>
+              <dd>
+                <ul class="pills">
+                  <li><div class="pill">Python</div></li>
+                  <li><div class="pill">MATLAB</div></li>
+                  <li><div class="pill">C</div></li>
+                  <li><div class="pill">C++</div></li>
+                  <li><div class="pill">C#</div></li>
+                  <li><div class="pill">Java</div></li>
+                  <li><div class="pill">VHDL</div></li>
+                  <li><div class="pill">Verilog</div></li>
+                  <li><div class="pill">Assembly</div></li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt>Reinforcement Learning</dt>
+              <dd>
+                <ul class="pills">
+                  <li><div class="pill">Inverse RL</div></li>
+                  <li><div class="pill">Preference-Based Reward Learning</div></li>
+                  <li><div class="pill">MDPs</div></li>
+                  <li><div class="pill">Dynamic Programming</div></li>
+                  <li><div class="pill">TD Learning</div></li>
+                  <li><div class="pill">Q-learning</div></li>
+                  <li><div class="pill">Expected Sarsa</div></li>
+                  <li><div class="pill">Dyna-Q</div></li>
+                  <li><div class="pill">Function Approximation</div></li>
+                  <li><div class="pill">Policy Gradients</div></li>
+                  <li><div class="pill">Actor-Critic</div></li>
+                  <li><div class="pill">Experience Replay</div></li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt>Deep Learning</dt>
+              <dd>
+                <ul class="pills">
+                  <li><div class="pill">PyTorch</div></li>
+                  <li><div class="pill">CNNs (ResNet, DenseNet)</div></li>
+                  <li><div class="pill">Transformers &amp; Self-Attention</div></li>
+                  <li><div class="pill">CNN–Transformer Hybrids</div></li>
+                  <li><div class="pill">Autoencoders</div></li>
+                  <li><div class="pill">Attention Visualization</div></li>
+                  <li><div class="pill">Ablation Studies</div></li>
+                  <li><div class="pill">Computer Vision</div></li>
+                  <li><div class="pill">NLP</div></li>
+                  <li><div class="pill">LLMs</div></li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt>Machine Learning</dt>
+              <dd>
+                <ul class="pills">
+                  <li><div class="pill">scikit-learn</div></li>
+                  <li><div class="pill">Random Forests</div></li>
+                  <li><div class="pill">Logistic Regression</div></li>
+                  <li><div class="pill">PCA</div></li>
+                  <li><div class="pill">Clustering</div></li>
+                  <li><div class="pill">t-SNE</div></li>
+                  <li><div class="pill">Gaussian Processes</div></li>
+                  <li><div class="pill">Feature Engineering</div></li>
+                  <li><div class="pill">ROC-AUC, F1, Cohen’s κ</div></li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt>Robotics &amp; Control</dt>
+              <dd>
+                <ul class="pills">
+                  <li><div class="pill">ROS</div></li>
+                  <li><div class="pill">3D LiDAR SLAM (LOAM, LeGO-LOAM)</div></li>
+                  <li><div class="pill">Point Cloud Processing</div></li>
+                  <li><div class="pill">RANSAC</div></li>
+                  <li><div class="pill">KITTI</div></li>
+                  <li><div class="pill">RViz</div></li>
+                  <li><div class="pill">Fuzzy Logic Control</div></li>
+                  <li><div class="pill">PID Control</div></li>
+                  <li><div class="pill">Feedback Control Design</div></li>
+                  <li><div class="pill">MATLAB / Simulink</div></li>
+                  <li><div class="pill">Human–Robot Interaction</div></li>
+                  <li><div class="pill">Rehabilitation Robotics</div></li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt>Signals &amp; Biomechanics</dt>
+              <dd>
+                <ul class="pills">
+                  <li><div class="pill">Biosignal Processing</div></li>
+                  <li><div class="pill">PPG &amp; Oscillometry</div></li>
+                  <li><div class="pill">Wearable Sensing</div></li>
+                  <li><div class="pill">Time–Frequency Features</div></li>
+                  <li><div class="pill">Analog &amp; Digital Signal Processing</div></li>
+                  <li><div class="pill">Biomechanical Motion Analysis</div></li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt>Hardware</dt>
+              <dd>
+                <ul class="pills">
+                  <li><div class="pill">PCB Design</div></li>
+                  <li><div class="pill">Altium Designer</div></li>
+                  <li><div class="pill">ARM (nRF)</div></li>
+                  <li><div class="pill">FPGA</div></li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt>Data &amp; Tools</dt>
+              <dd>
+                <ul class="pills">
+                  <li><div class="pill">Git</div></li>
+                  <li><div class="pill">Jupyter</div></li>
+                  <li><div class="pill">pandas</div></li>
+                  <li><div class="pill">Data Visualization</div></li>
+                  <li><div class="pill">Power BI</div></li>
+                  <li><div class="pill">Tableau</div></li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt>Design &amp; IT</dt>
+              <dd>
+                <ul class="pills">
+                  <li><div class="pill">Photoshop</div></li>
+                  <li><div class="pill">Illustrator</div></li>
+                  <li><div class="pill">WordPress</div></li>
+                  <li><div class="pill">Windows Server</div></li>
+                  <li><div class="pill">Networking</div></li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt>Languages</dt>
+              <dd>
+                <ul class="pills">
+                  <li><div class="pill">Persian (Native)</div></li>
+                  <li><div class="pill">English (Advanced)</div></li>
+                  <li><div class="pill">French (Basic)</div></li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </section>
+
         <!-- Publications -->
         <section id="publications" class="section" aria-label="Publications">
           <div class="section-head"><h2>Publications</h2></div>
@@ -495,6 +699,11 @@
                   </h3>
                   <p class="authors"><span class="me">A.&nbsp;Ayazbakhsh&nbsp;Ziyabari</span>, R.&nbsp;Behbahani&nbsp;Nejad, A.&nbsp;Afkhami&nbsp;Ardekani, A.&nbsp;H.&nbsp;Vette, M.&nbsp;Nazarahari</p>
                   <p class="venue">IEEE RAS/EMBS International Conference on Biomedical Robotics and Biomechatronics (BioRob), 2026</p>
+                  <p class="card-text">
+                    A fuzzy-PID controller, overseen by a plateau and slacking detector, keeps exergame difficulty at a
+                    target performance level. In a four-participant feasibility study, normalized performance rose
+                    17.6% after training.
+                  </p>
                   <ul class="pills" aria-label="Topics">
                     <li><div class="pill">First author</div></li>
                     <li><div class="pill">Dynamic Difficulty Adjustment</div></li>
@@ -516,6 +725,11 @@
                   </h3>
                   <p class="authors">A.&nbsp;Afkhami&nbsp;Ardekani, A.&nbsp;Salemi, R.&nbsp;Behbahani&nbsp;Nejad, <span class="me">A.&nbsp;Ayazbakhsh&nbsp;Ziyabari</span>, A.&nbsp;H.&nbsp;Vette, M.&nbsp;Nazarahari</p>
                   <p class="venue">IEEE RAS/EMBS International Conference on Biomedical Robotics and Biomechatronics (BioRob), 2026</p>
+                  <p class="card-text">
+                    Learns a reward function from ranked trajectories of human Pong gameplay and uses it as a
+                    continuous measure of motor learning, complementing score-based metrics (10 participants,
+                    <span class="nowrap">AUC-ROC&nbsp;0.85</span>).
+                  </p>
                   <ul class="pills" aria-label="Topics">
                     <li><div class="pill">Inverse Reinforcement Learning</div></li>
                     <li><div class="pill">Motor Learning</div></li>
@@ -535,11 +749,9 @@
 
         <footer class="footer">
           <p>
-            Layout inspired by
-            <a href="https://brittanychiang.com/" target="_blank" rel="noreferrer noopener">Brittany Chiang</a>’s portfolio.
-            Hand-coded in plain HTML, CSS and a little JavaScript, set in the
-            <a href="https://rsms.me/inter/" target="_blank" rel="noreferrer noopener">Inter</a> typeface, and hosted on
-            <a href="https://pages.github.com/" target="_blank" rel="noreferrer noopener">GitHub Pages</a>.
+            &copy; 2026 Atoosa Ayazbakhsh. All rights reserved.
+            Design inspired by
+            <a href="https://brittanychiang.com/" target="_blank" rel="noreferrer noopener">Brittany Chiang</a>.
           </p>
         </footer>
       </main>
