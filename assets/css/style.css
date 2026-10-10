@@ -121,7 +121,11 @@ button { font: inherit; }
 @media (min-width: 768px) { .page { padding: 5rem 3rem; } }
 @media (min-width: 1024px) {
   .page { padding: 0 6rem; }
-  .layout { display: flex; justify-content: space-between; gap: 1rem; }
+  .layout {
+    display: flex; justify-content: space-between; gap: 1rem;
+    /* Top padding shared by both columns; shrinks on short windows so the sticky sidebar fits */
+    --pad-y: clamp(1.5rem, 16vh - 5rem, 6rem);
+  }
 }
 
 /* ---------- Header (left column) ---------- */
@@ -129,8 +133,13 @@ button { font: inherit; }
   .header {
     position: sticky; top: 0;
     display: flex; flex-direction: column; justify-content: space-between;
-    width: 50%; max-height: 100vh; padding: 6rem 0;
+    width: 50%; max-height: 100vh; padding: var(--pad-y) 0;
+    /* Fallback for very short windows: let the sidebar scroll instead of clipping.
+       The side padding/negative margin keeps the avatar's ring from being cut off. */
+    overflow-y: auto; scrollbar-width: none;
+    margin-left: -0.5rem; padding-left: 0.5rem;
   }
+  .header::-webkit-scrollbar { display: none; }
 }
 
 .avatar {
@@ -140,6 +149,10 @@ button { font: inherit; }
   box-shadow: 0 0 0 4px var(--accent-bg);
 }
 @media (min-width: 640px) { .avatar { width: 14rem; } }
+/* Desktop sidebar is sticky at 100vh, so scale it with window height */
+@media (min-width: 1024px) {
+  .avatar { width: clamp(7rem, 30vh - 5rem, 14rem); margin-bottom: clamp(1rem, 2.5vh, 1.5rem); }
+}
 
 .name {
   font-size: 2.25rem; line-height: 2.5rem; font-weight: 700;
@@ -153,12 +166,12 @@ button { font: inherit; }
 }
 @media (min-width: 640px) { .role { font-size: 1.25rem; } }
 
-.tagline { margin-top: 1rem; max-width: 20rem; line-height: 1.5; }
+.tagline { margin-top: 1rem; max-width: 24rem; line-height: 1.5; }
 
 .nav { display: none; }
 @media (min-width: 1024px) { .nav { display: block; } }
-.nav ul { margin-top: 4rem; width: max-content; }
-.nav a { display: flex; align-items: center; padding: 0.75rem 0; }
+.nav ul { margin-top: clamp(1.5rem, 10vh - 3rem, 4rem); width: max-content; }
+.nav a { display: flex; align-items: center; padding: clamp(0.3125rem, 1.5vh - 0.25rem, 0.75rem) 0; }
 .nav-indicator {
   margin-right: 1rem; height: 1px; width: 2rem; background: var(--line);
   transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
@@ -174,6 +187,7 @@ button { font: inherit; }
 .nav a.active .nav-text { color: var(--bright); }
 
 .socials { display: flex; align-items: center; margin: 2rem 0 0 0.25rem; }
+@media (min-width: 1024px) { .socials { margin-top: clamp(1rem, 4vh - 0.75rem, 2rem); } }
 .socials li { margin-right: 1.25rem; flex-shrink: 0; font-size: 0.75rem; }
 .socials a { display: block; color: var(--text); transition: color 0.15s; }
 .socials a:hover, .socials a:focus-visible { color: var(--bright); }
@@ -181,7 +195,7 @@ button { font: inherit; }
 
 /* ---------- Main (right column) ---------- */
 .main { padding-top: 6rem; }
-@media (min-width: 1024px) { .main { width: 50%; padding: 6rem 0; } }
+@media (min-width: 1024px) { .main { width: 50%; padding: var(--pad-y) 0 6rem; } }
 
 .section { margin-bottom: 4rem; scroll-margin-top: 4rem; }
 @media (min-width: 768px) { .section { margin-bottom: 6rem; } }
@@ -527,5 +541,6 @@ button { font: inherit; }
 @media (min-width: 1024px) { .hello { margin-top: 7rem; } }
 .hello h2 { font-size: 1.5rem; line-height: 1.25; font-weight: 700; letter-spacing: -0.025em; color: var(--bright); }
 .hello p { max-width: 32rem; margin-top: 0.5rem; }
+.hello .socials { margin-top: 1.25rem; }
 .hello .more { margin-top: 1.5rem; flex-shrink: 0; color: var(--accent); }
 @media (min-width: 768px) { .hello .more { margin-top: 0; } }
