@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Atoosa Ayazbakhsh Ziyabari</title>
-  <meta name="description" content="Atoosa Ayazbakhsh Ziyabari is an M.Sc. researcher in Mechanical Engineering at the University of Alberta, building adaptive robotic rehabilitation systems with adaptive control, inverse reinforcement learning and deep learning.">
+  <meta name="description" content="Atoosa Ayazbakhsh Ziyabari is an M.Sc. researcher in Mechanical Engineering at the University of Alberta, focused on AI for human-in-the-loop robotics: adaptive robotic rehabilitation built with control, inverse reinforcement learning and deep learning.">
   <meta name="author" content="Atoosa Ayazbakhsh Ziyabari">
   <meta name="theme-color" content="#0f172a">
   <link rel="canonical" href="https://atoosaz.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Atoosa Ayazbakhsh Ziyabari">
-  <meta property="og:description" content="Robotics &amp; AI researcher at the University of Alberta, building adaptive robotic rehabilitation systems.">
+  <meta property="og:description" content="Robotics &amp; AI researcher at the University of Alberta, focused on AI for human-in-the-loop robotics and adaptive robotic rehabilitation.">
   <meta property="og:url" content="https://atoosaz.github.io/">
   <meta property="og:image" content="https://atoosaz.github.io/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -87,26 +87,20 @@
           <p>
             I’m a Master’s student in Mechanical Engineering at the
             <a class="link-strong" href="https://www.ualberta.ca/" target="_blank" rel="noreferrer noopener">University of Alberta</a>,
-            working where robotics, machine learning and human motor learning meet. In the IDEA Lab, I design control strategies and data-driven algorithms that adapt
-            robotic rehabilitation to each person in real time, keeping therapy challenging enough to drive learning, without
-            becoming discouraging.
+            focused on AI for human-in-the-loop robotics, where robotics, machine learning and human motor learning meet.
+            In the IDEA Lab, I design control strategies and data-driven algorithms that adapt robotic rehabilitation to
+            each person in real time, keeping therapy challenging enough to drive learning, without becoming discouraging.
           </p>
           <p>
             My path here started in electrical engineering at K.&nbsp;N.&nbsp;Toosi University of Technology, where I designed a digital
             blood pressure monitor and worked on oscillometric and PPG signal processing, from active filter circuits and PCBs
-            to estimation algorithms. Alongside my studies, I spent seven years as an IT manager looking after a company’s
-            systems, network and website.
+            to estimation algorithms.
           </p>
           <p>
-            My research sits on two questions. How should a robot adjust a task’s difficulty as a person learns? And
-            how can we tell, beyond a game score, that they are actually learning? I’ve approached the first with
-            adaptive control, a fuzzy-PID difficulty controller overseen by a plateau detector, and the second with
-            preference-based inverse reinforcement learning. Both lines of work were published at IEEE BioRob 2026.
-          </p>
-          <p>
-            Alongside that, I build deep learning models for medical images and physiological signals (CNNs,
+            Alongside my thesis, I build deep learning models for medical images and physiological signals (CNNs,
             Transformers, autoencoders) and robot perception pipelines such as 3D LiDAR SLAM in ROS. I also teach:
-            this term I’m a teaching assistant and lecturer for Applied Computational Intelligence for Engineers.
+            this term I’m a teaching assistant for Applied Computational Intelligence for Engineers, where I led and
+            lectured a full class session.
           </p>
           <p>
             Outside the lab, I volunteer at research and engineering conferences on campus. I speak Persian and English,
@@ -118,6 +112,49 @@
               <span><span class="u">More About Me &amp; My </span><span class="nowrap"><span class="u">Hobbies</span><svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/></svg></span></span>
             </a>
           </div>
+        </section>
+
+        <!-- Research -->
+        <section id="research" class="section research" aria-label="Research">
+          <div class="section-head"><h2>Research</h2></div>
+          <p>
+            My thesis asks two questions. How should a rehabilitation robot adjust a task’s difficulty as a person
+            learns? And how can we tell, beyond a game score, that they are actually learning?
+          </p>
+          <p>
+            For the first, I designed a two-layer difficulty controller for upper-limb exergames: a fuzzy
+            gain-scheduled PID loop that holds performance near a target, overseen by a supervisor that detects
+            plateaus and slacking. For the second, we learn a reward function from ranked human gameplay with
+            preference-based inverse reinforcement learning, and use it as a continuous measure of motor learning.
+            Both were published at <span class="hl">IEEE BioRob 2026</span>.
+          </p>
+
+          <div class="gallery">
+            <figure class="g-main">
+              <img src="assets/img/research/exergame-session.jpg" alt="Atoosa, seen from behind wearing a sensor cap, grips the handle of a Kinarm robot and steers a green ball along a curved path through a space-themed exergame on the monitor." width="1080" height="1440" loading="lazy">
+              <figcaption>Mid-trial</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/img/research/sensor-setup.jpg" alt="Front view of Atoosa wearing eye-tracking glasses and a sensor cap, holding the robot handle and watching the screen." width="720" height="960" loading="lazy">
+              <figcaption>Sensors on</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/img/research/trial-complete.jpg" alt="Atoosa at the Kinarm robot between trials, with a sensor on the left wrist and a “Trial complete” message on the monitor." width="720" height="960" loading="lazy">
+              <figcaption>Trial complete</figcaption>
+            </figure>
+          </div>
+
+          <p>
+            My latest work reads the learner, not just the performance. In the photos above, I’m in the
+            participant’s seat for robot-assisted training: steering an exergame with the handle of a Kinarm robot
+            while eye-tracking glasses record gaze and head- and hand-worn sensors record physiological signals, so
+            difficulty can respond to how a person is coping as well as how they score. This physiology-informed
+            approach is the subject of my poster at the Alberta Biomedical Engineering Conference (Canmore, November 2026).
+          </p>
+          <p>
+            Next, in 2027, I’ll take this research to <span class="hl">RWTH Aachen University</span> in Germany for a
+            thesis research stay, supported by the RWTH Aachen – University of Alberta Junior Research Fellowship.
+          </p>
         </section>
 
         <!-- Experience -->
@@ -178,10 +215,11 @@
                   <div class="sub-role">MEC E 694 — Applied Computational Intelligence</div>
                   <div class="sub-role">MEC E 420 — Feedback Control Design</div>
                   <p class="card-text">
-                    Leading and lecturing a three-hour class session, holding office hours and marking assignments for
-                    Applied Computational Intelligence for Engineers. Previously the lab instructor for an undergraduate
-                    feedback control course, guiding students through MATLAB/Simulink modelling
-                    and controller design.
+                    For Applied Computational Intelligence for Engineers (since Sep 2026), I led and lectured a full
+                    three-hour class session, and I hold office hours and mark assignments. Before that (Jan – Apr 2026), I was
+                    the lab instructor for an undergraduate feedback control course, leading weekly lab sessions on the
+                    design and analysis of dynamic control systems and guiding students through MATLAB/Simulink
+                    modelling and controller design.
                   </p>
                   <ul class="pills" aria-label="Topics">
                     <li><div class="pill">Computational Intelligence</div></li>
@@ -254,9 +292,10 @@
                   <div class="sub-role">Design of Digital Systems (FPGA, ASIC)</div>
                   <div class="sub-role">C Programming</div>
                   <p class="card-text">
-                    Supported lab sessions and graded projects for a digital systems course covering FPGA and ASIC design
-                    flows (HDL coding, simulation, synthesis and timing analysis), and taught core C concepts such as
-                    pointers and memory management to undergraduates.
+                    Assisted in teaching a digital system design course covering FPGA and ASIC design flows, guiding
+                    students through HDL (VHDL/Verilog) coding, simulation, synthesis and timing analysis, and an
+                    undergraduate C programming course covering data types, control flow, functions, pointers and
+                    memory management.
                   </p>
                   <ul class="pills" aria-label="Technologies used">
                     <li><div class="pill">VHDL</div></li>
@@ -268,28 +307,15 @@
               </div>
             </li>
 
-            <li>
-              <div class="card">
-                <div class="card-bg"></div>
-                <header class="card-meta" aria-label="September 2017 to November 2024">2017 — 2024</header>
-                <div class="card-body">
-                  <h3 class="card-title">
-                    <span class="plain">IT Manager · ATP Co.</span>
-                  </h3>
-                  <p class="card-text">
-                    Oversaw the company’s IT infrastructure, including systems and network administration, website
-                    management and troubleshooting critical issues, and delivered the technical support that kept
-                    day-to-day operations running smoothly.
-                  </p>
-                  <ul class="pills" aria-label="Technologies used">
-                    <li><div class="pill">Windows Server</div></li>
-                    <li><div class="pill">Networking</div></li>
-                    <li><div class="pill">WordPress</div></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
           </ol>
+
+          <h3 class="sub-heading">Volunteering</h3>
+          <ul class="certs">
+            <li><span class="c-name">RISEx 2026<span class="c-org">Event Volunteer · University of Alberta</span><span class="c-detail">Supported attendee registration and check-in, and helped coordinate sessions and on-site logistics.</span></span><span class="c-date">Nov 2026</span></li>
+            <li><span class="c-name">Faculty of Engineering Graduate Research Symposium (FEGRS) 2026<span class="c-org">Volunteer · University of Alberta</span><span class="c-detail">Recognized with a Certificate of Appreciation from the Associate Dean, Research Programs &amp; Development.</span></span><span class="c-date">Aug 2026</span></li>
+            <li><span class="c-name">Design Conference<span class="c-org">Conference Volunteer · University of Alberta</span><span class="c-detail">Helped organize and run conference sessions, registration and on-site coordination.</span></span><span class="c-date">Nov 2025</span></li>
+            <li><span class="c-name">Biomedical Conference<span class="c-org">Conference Volunteer · University of Alberta</span><span class="c-detail">Provided technical support and helped run sessions, registration and on-site logistics.</span></span><span class="c-date">May 2025</span></li>
+          </ul>
 
           <div class="more-wrap">
             <a class="more" href="assets/Atoosa_Ayazbakhsh_Ziyabari_Resume.pdf" target="_blank" rel="noreferrer noopener" aria-label="View Full Résumé (opens in a new tab)">
@@ -352,9 +378,10 @@
           <ul class="certs">
             <li><span class="c-name">Reinforcement Learning Specialization<span class="c-org">University of Alberta · Coursera · four courses</span><span class="c-detail">Bandits, MDPs and dynamic programming; Monte Carlo and TD methods (Q-learning, Expected Sarsa, Dyna-Q); function approximation, policy gradients and actor-critic; capstone lunar-lander agent using Expected Sarsa with a neural network and experience replay.</span></span><span class="c-date">Jul 2025</span></li>
             <li><span class="c-name">Deep Learning — Tutorial &amp; Project Certificate<span class="c-org">Neuromatch Academy</span><span class="c-detail">Intensive course in PyTorch spanning optimization and regularization, CNNs, Transformers, generative models and deep RL, plus a research project on narrative memory.</span></span><span class="c-date">Jul 2023</span></li>
-            <li><span class="c-name">Neural Networks and Deep Learning<span class="c-org">DeepLearning.AI · Coursera · Grade 95.62/100</span><span class="c-detail">Built shallow and deep networks from scratch in NumPy with vectorized forward and backward propagation.</span></span><span class="c-date">Mar 2022</span></li>
-            <li><span class="c-name">Python Data Structures<span class="c-org">University of Michigan · Coursera · Grade 93.6/100</span></span><span class="c-date">Mar 2022</span></li>
-            <li><span class="c-name">Machine Learning<span class="c-org">Stanford University · Coursera · Grade 93.21/100</span></span><span class="c-date">Jan 2022</span></li>
+            <li><span class="c-name">IELTS — Academic Module<span class="c-org">CEFR Level C1 · Band Score 7</span><span class="c-detail">Listening 7.5, Reading 7.5, Speaking 7, Writing 6.5.</span></span><span class="c-date">Apr 2023</span></li>
+            <li><span class="c-name">Neural Networks and Deep Learning<span class="c-org">DeepLearning.AI · Coursera</span><span class="c-detail">Built shallow and deep networks from scratch in NumPy with vectorized forward and backward propagation.</span></span><span class="c-date">Mar 2022</span></li>
+            <li><span class="c-name">Python Data Structures<span class="c-org">University of Michigan · Coursera</span></span><span class="c-date">Mar 2022</span></li>
+            <li><span class="c-name">Machine Learning<span class="c-org">Stanford University · Coursera</span></span><span class="c-date">Jan 2022</span></li>
           </ul>
         </section>
 
@@ -362,8 +389,8 @@
         <section id="awards" class="section" aria-label="Honours and awards">
           <div class="section-head"><h2>Honours &amp; Awards</h2></div>
           <ul class="certs">
-            <li><span class="c-name">RWTH Aachen – University of Alberta Junior Research Fellowship<span class="c-org">RWTH Aachen University · University of Alberta</span><span class="c-detail">Upcoming thesis research stay in Aachen, Germany.</span></span><span class="c-date">2026</span></li>
-            <li><span class="c-name">Graduate Student Travel Award<span class="c-org">University of Alberta</span><span class="c-detail">Funds research travel to RWTH Aachen for the fellowship.</span></span><span class="c-date">2026</span></li>
+            <li><span class="c-name">RWTH Aachen – University of Alberta Junior Research Fellowship<span class="c-org">RWTH Aachen University · University of Alberta</span><span class="c-detail">Upcoming thesis research stay in Aachen, Germany.</span></span><span class="c-date">2027</span></li>
+            <li><span class="c-name">Graduate Student Travel Award<span class="c-org">University of Alberta</span><span class="c-detail">Funds research travel to RWTH Aachen for the fellowship.</span></span><span class="c-date">2027</span></li>
             <li><span class="c-name">Graduate Recruitment Scholarship<span class="c-org">University of Alberta</span><span class="c-detail">Merit-based award for incoming graduate students.</span></span><span class="c-date">Jan 2025</span></li>
           </ul>
         </section>
@@ -472,7 +499,9 @@
                   <h3 class="card-title"><span class="plain">PPG Biosensing: PCB &amp; Blood Glucose Estimation</span></h3>
                   <p class="card-text">
                     Designed and fabricated a PPG signal-acquisition PCB in Altium Designer, then built a feature-based
-                    machine learning pipeline to estimate blood glucose from PPG signals under limited-data constraints.
+                    machine learning pipeline to estimate blood glucose from PPG signals under limited-data constraints,
+                    focusing on signal preprocessing and vital feature extraction. Supervised by Dr. Danial Katoozian at
+                    Zistel Company.
                   </p>
                   <ul class="pills" aria-label="Technologies used">
                     <li><div class="pill">Altium Designer</div></li>
@@ -669,21 +698,16 @@
                   <li><div class="pill">Unity</div></li>
                   <li><div class="pill">Jupyter</div></li>
                   <li><div class="pill">pandas</div></li>
-                  <li><div class="pill">Data Visualization</div></li>
-                  <li><div class="pill">Power BI</div></li>
-                  <li><div class="pill">Tableau</div></li>
+                  <li><div class="pill">Python Visualization Libraries</div></li>
                 </ul>
               </dd>
             </div>
             <div>
-              <dt>Design &amp; IT</dt>
+              <dt>Graphic Design</dt>
               <dd>
                 <ul class="pills">
                   <li><div class="pill">Photoshop</div></li>
                   <li><div class="pill">Illustrator</div></li>
-                  <li><div class="pill">WordPress</div></li>
-                  <li><div class="pill">Windows Server</div></li>
-                  <li><div class="pill">Networking</div></li>
                 </ul>
               </dd>
             </div>
@@ -701,7 +725,7 @@
         </section>
 
         <!-- Publications -->
-        <section id="publications" class="section" aria-label="Publications">
+        <section id="publications" class="section" aria-label="Publications and presentations">
           <div class="section-head"><h2>Publications</h2></div>
           <ol class="card-list">
             <li>
@@ -757,6 +781,13 @@
               </div>
             </li>
           </ol>
+
+          <h3 class="sub-heading">Conference Presentations</h3>
+          <ul class="certs">
+            <li><span class="c-name">Reading the Learner, Not Just the Performance: Physiology-Informed Adaptive Exergames for Robotic Upper-Limb Training<span class="c-org">Poster · Alberta Biomedical Engineering Conference, Canmore, AB</span></span><span class="c-date">Nov 2026</span></li>
+            <li><span class="c-name">Stay in the Zone: Intelligent Two-Layered Dynamic Difficulty Adjustment for Upper-Limb Exergame<span class="c-org">Oral · IEEE BioRob 2026, Edmonton, AB</span></span><span class="c-date">Aug 2026</span></li>
+            <li><span class="c-name">Honing in on the Optimal Challenge in Upper Limb Exergames: An Intelligent Two-Layer Dynamic Difficulty Adjustment Framework<span class="c-org">Oral · Biomedical Engineering Research Day, University of Alberta, Edmonton, AB</span></span><span class="c-date">May 2026</span></li>
+          </ul>
 
           <div class="more-wrap">
             <a class="more" href="https://scholar.google.ca/citations?user=gC0g_YEAAAAJ&amp;hl=en" target="_blank" rel="noreferrer noopener" aria-label="View Google Scholar profile (opens in a new tab)">

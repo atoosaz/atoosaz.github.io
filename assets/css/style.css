@@ -228,6 +228,41 @@ button { font: inherit; }
 .link-strong:hover, .link-strong:focus-visible { color: var(--accent); }
 .hl { font-weight: 500; color: var(--bright); }
 
+/* Research: text + photo mosaic */
+.research p { margin-bottom: 1rem; text-align: justify; hyphens: auto; }
+
+.gallery {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem;
+  margin: 2rem 0;
+}
+/* ≥640px: one large photo on the left, two stacked on the right */
+@media (min-width: 640px) {
+  .gallery { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); max-width: 36rem; }
+}
+.gallery figure {
+  position: relative; margin: 0; overflow: hidden;
+  border-radius: 0.5rem; border: 2px solid var(--border-soft);
+  background: var(--thumb-bg);
+  transition: border-color 0.15s;
+}
+.gallery figure:hover { border-color: var(--border-hover); }
+.gallery img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; }
+/* The large photo fills whatever height the two stacked photos set */
+.gallery .g-main { grid-column: span 2; aspect-ratio: 4 / 5; }
+.gallery .g-main img { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; object-position: 50% 30%; }
+@media (min-width: 640px) {
+  .gallery .g-main { grid-column: auto; grid-row: span 2; aspect-ratio: auto; }
+}
+.gallery figcaption {
+  position: absolute; left: 0.5rem; bottom: 0.5rem; max-width: calc(100% - 1rem);
+  padding: 0.125rem 0.5rem; border-radius: 9999px;
+  background: rgba(15, 23, 42, 0.75); color: #e2e8f0;
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+  font-size: 0.6875rem; line-height: 1.25rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
 /* Lead-in paragraph above a section's cards */
 .section-intro { margin-bottom: 3rem; }
 

@@ -17,6 +17,7 @@ assets/
   js/main.js                Light/dark toggle + cursor spotlight + active-section nav highlighting
   img/projects/             Project thumbnails (16:10)
   img/about/                Photos for the About page (3:4 portrait)
-  img/og.png                Link-preview image for social sites
+  img/research/             Robot-assisted training photos for the Research section (3:4 portrait)
+  img/og.jpg                Link-preview image for social sites
   Atoosa_Ayazbakhsh_Ziyabari_Resume.pdf
 ```
